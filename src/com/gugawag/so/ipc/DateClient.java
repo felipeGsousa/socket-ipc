@@ -11,6 +11,7 @@ package com.gugawag.so.ipc;
 
 import java.net.*;
 import java.io.*;
+import java.util.Date;
 
 public class DateClient {
 	public static void main(String[] args)  {
@@ -22,9 +23,12 @@ public class DateClient {
 
 			System.out.println("=== Cliente iniciado ===\n");
 
+			PrintWriter pout = new PrintWriter(sock.getOutputStream(), true);
+			pout.println("Felipe Galdino de Sousa");
+
 			String line = bin.readLine();
 			System.out.println("O servidor me disse:" + line);
-				
+
 			sock.close();
 		}
 		catch (IOException ioe) {

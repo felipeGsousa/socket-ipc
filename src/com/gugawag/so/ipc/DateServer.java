@@ -27,7 +27,7 @@ public class DateServer{
 				PrintWriter pout = new PrintWriter(client.getOutputStream(), true);
 
 				// Escreve a data atual no socket
-				pout.println(new Date().toString() + "-Boa noite alunos!");
+				pout.println(new Date().toString() + "Felipe Galdino de Sousa");
 
 				InputStream in = client.getInputStream();
 				BufferedReader bin = new BufferedReader(new InputStreamReader(in));
